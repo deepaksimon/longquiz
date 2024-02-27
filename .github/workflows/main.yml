@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print a greeting
-        run: echo ${{ secrets.DOCKER_TT }}
+        run: echo 'Longquiz'
       - name: Checkout code
         uses: actions/checkout@v4
       - name: build docker
@@ -20,5 +20,5 @@ jobs:
           docker buildx create --use
           docker buildx build \
             --file Dockerfile \
-            --tag jiffingeorge/jigefastapi:latest \
+            --tag deepaksimon/longquiz:latest \
             --push .
